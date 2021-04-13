@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,6 @@ namespace SeleniumFirst
 {
     public static class SeleniumSetMethods
     {
-
         //Enter text method
         //public static void EnterText(IWebPropertiesCollection.driver PropertiesCollection.driver, string element, string value, string elementtype) - method without global properties
         //public static void EnterText(string element, string value, ProperyType elementtype)
@@ -21,16 +20,13 @@ namespace SeleniumFirst
         //        PropertiesCollection.driver.FindElement(By.Name(element)).SendKeys(value);
         //}
 
-        
         //Exteded method for entering text in the control
 
-    //part10
+    //part 10
         public static void EnterText(this IWebElement element, string value)
         {
             element.SendKeys(value);
         }
-
-
 
         //Click into a button, Checkbox, option etc
         //public static void Click(IWebPropertiesCollection.driver PropertiesCollection.driver, string element, string elementtype) - method without global properties
@@ -44,12 +40,11 @@ namespace SeleniumFirst
 
         //Click into a button, Checkbox, option etc
         
-    //part10
+    //part 10
         public static void Clicks(this IWebElement element)
         {
             element.Click();
         }
-
 
         //Selecting a drop down control
         //public static void SelectDropDown(IWebPropertiesCollection.driver PropertiesCollection.driver, string element, string value, string elementtype) - method without global properties
@@ -63,15 +58,10 @@ namespace SeleniumFirst
 
         //Selecting a drop down control
 
-    //part10
+    //part 10
         public static void SelectDropDown(this IWebElement element, string value)
         {
             new SelectElement(element).SelectByText(value);
         }
-
-
-
-
-
     }
 }

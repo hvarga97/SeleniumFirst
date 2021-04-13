@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -10,12 +10,10 @@ namespace SeleniumFirst
 {
     class LoginPageObject
     {
-
         public LoginPageObject()
         {
             PageFactory.InitElements(PropertiesCollection.driver, this);
         }
-
 
         [FindsBy(How = How.Name, Using = "UserName")]
         public IWebElement txtUserName { get; set; }
@@ -26,9 +24,6 @@ namespace SeleniumFirst
         [FindsBy(How = How.Name, Using = "Login")]
         public IWebElement btnLogin { get; set; }
 
-
-
-
         public EAPageObject Login(string userName, string password)
         {
             //UserName
@@ -38,7 +33,7 @@ namespace SeleniumFirst
             ////Click button
             //btnLogin.Submit();
 
-            //part11
+         //part 11
             txtUserName.EnterText(userName);
 
             txtPassword.EnterText(password);

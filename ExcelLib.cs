@@ -1,4 +1,4 @@
-﻿using ExcelDataReader;
+using ExcelDataReader;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,8 +19,7 @@ namespace SeleniumFirst_02
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream); //.xlsx
             //Set the First Row as Column Name
 
-            //excelReader.IsFirstRowAsColumnNames = true;
-
+            //excelReader.IsFirstRowAsColumnNames = true; - old way
 
             DataSet result = excelReader.AsDataSet(new ExcelDataSetConfiguration()
             {
@@ -28,9 +27,7 @@ namespace SeleniumFirst_02
                 {
                     UseHeaderRow = true
                 }
-
             });
-
 
             //Return as DataSet
             //DataSet result = excelReader.AsDataSet();
@@ -38,10 +35,8 @@ namespace SeleniumFirst_02
             DataTableCollection table = result.Tables;
             //Store it in DataTable
             DataTable resultTable = table["Sheet1"];
-
             //return
             return resultTable;
-
         }
 
         static List<Datacollection> dataCol = new List<Datacollection>();
@@ -67,7 +62,6 @@ namespace SeleniumFirst_02
             }
         }
 
-
         public static string ReadData(int rowNumber, string columnName)
         {
             try
@@ -92,9 +86,5 @@ namespace SeleniumFirst_02
             public string colName { get; set; }
             public string colValue { get; set; }
         }
-
-
-
     }
-
 }

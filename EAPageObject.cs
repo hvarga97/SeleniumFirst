@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -40,19 +40,18 @@ namespace SeleniumFirst
             //txtMiddleName.SendKeys(middleName);
             //btnSave.Click();
 
-            //part10
+         //part 10
             //SeleniumSetMethods.EnterText(txtInitial, initial);
             //SeleniumSetMethods.EnterText(txtFirstName, firstName);
             //SeleniumSetMethods.EnterText(txtMiddleName, middleName);
             //SeleniumSetMethods.Click(btnSave);
 
-            //part 11
+         //part 11
 
             txtInitial.EnterText(initial);
             txtFirstName.EnterText(firstName);
             txtMiddleName.EnterText(middleName);
             btnSave.Clicks();
-
 
         }
 

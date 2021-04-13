@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using SeleniumFirst_02;
@@ -12,11 +12,9 @@ namespace SeleniumFirst
 {
     class Program
     {
-
         //Create the reference for browser
-        //IWebPropertiesCollection.driver PropertiesCollection.driver = new ChromePropertiesCollection.driver();                         //Global variable - used before calling line 27 (calling PropertiesCollection.driver from PropertiesCollectio)
+        //IWebPropertiesCollection.driver PropertiesCollection.driver = new ChromePropertiesCollection.driver();     //Global variable - used before calling line 26 (calling PropertiesCollection.driver from PropertiesCollectio)
         
-
         static void Main(string[] args)
         {
         }
@@ -61,7 +59,7 @@ namespace SeleniumFirst
             //Click
             //SeleniumSetMethods.Click("Save", ProperyType.Name);
 
-            //part 8
+         //part 8
             //Initialize the page by calling its reference
             //EAPageObject page = new EAPageObject();
 
@@ -69,16 +67,14 @@ namespace SeleniumFirst
 
             //pageEA.btnSave.Click();
 
-
-            //part 9
+         //part 9
             //Login to Application
             //LoginPageObject pageLogin = new LoginPageObject();
             //EAPageObject pageEA = pageLogin.Login("execute", "automation");
 
             //pageEA.FillUserForm("KK", "Hrv", "Hrvoje");
 
-
-            //part12
+         //part 12
 
             ExcelLib.PopulateInCollection(@"\\Mac\Home\Desktop\Book.xlsx");
 
@@ -87,8 +83,6 @@ namespace SeleniumFirst
             EAPageObject pageEA = pageLogin.Login(ExcelLib.ReadData(1, "UserName"), ExcelLib.ReadData(1, "Password"));
             //Fill User Details
             pageEA.FillUserForm(ExcelLib.ReadData(1, "Initial"), ExcelLib.ReadData(1, "MiddleName"), ExcelLib.ReadData(1, "FirstName"));
-
-
         }
 
         [Test]                                                          //Execution part 2

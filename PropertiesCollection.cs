@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace SeleniumFirst
 {
-
     enum ProperyType
     {
         Id,
@@ -19,14 +18,10 @@ namespace SeleniumFirst
 
     class PropertiesCollection
     {
-        
-
         //Auto-implemented Property
-
         public static IWebDriver driver
         {
             get; set;
         }
-
     }
 }
